@@ -16,9 +16,6 @@
 
 	<body>
 		<h3>CRUD Assignment</h3>
-
-		
-
 		<table border=1>
 			<tr>
 				<th>Name</th>
@@ -26,25 +23,22 @@
 				<th>Version</th>
 				<th>Action</th>
 			</tr>
-		<c:forEach items="${languages}" var = "language">
-			
+			<c:forEach items="${languages}" var = "language">
 			<tr>	
-				<td><a href="/info/${language.id}">${language.name}</a></td>
-				<td>${language.creator}</td>
-				<td>${language.version}</td>
-				<td><a href="/edit/${language.id}">Edit</a> <a href="/delete/${language.id}">Delete</a></td>
+					<td><a href="/info/${language.id}">${language.name}</a></td>
+					<td>${language.creator}</td>
+					<td>${language.version}</td>
+					<td><a href="/edit/${language.id}">Edit</a> <a href="/delete/${language.id}">Delete</a></td>
+				</c:forEach>
 			</tr>
-		</c:forEach>
 		</table><br>
 
 		<form action="/kittykatlicklick"method="post">
-		Language <input type="text" name="name"><br>
-		Creator <input type="text" name="creator"><br>
-		Version <input type="text" name="version"><br>
-		<input type="submit" value="Submit">
+			Language <input type="text" name="name"><br>
+			Creator <input type="text" name="creator"><br>
+			Version <input type="text" name="version"><br>
+			<input type="submit" value="Submit">
 		</form>
-
-
 
 	</body>
 </html>

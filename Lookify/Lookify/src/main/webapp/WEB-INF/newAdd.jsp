@@ -15,17 +15,27 @@
 	</head>
 
 	<body>
-        <h3>Edit Entry</h3>
-        <a href="/delete">Delete</a>
-        <a href="/">Dashboard</a>
-		<form action="/update/${language.id}" method="post">
-			<label>Name: </label>
-			<input type="text" name="name" placeholder="${language.name}"><br><br>
-			<label>Creator: </label>
-			<input type="text" name="creator" placeholder="${language.creator}"><br><br>
-			<label>Version: </label>
-			<input type="text" name="version" placeholder="${language.version}"><br><br>
-			<input type="submit" value="Submit"><br>
-		</form>
+        <a href="/dashboard">Dashboard</a>
+        <form action="/newSong" method="post">
+        <label>Title:</label>
+        <input type="text" name="title">
+        <label>Artist:</label>
+        <input type="text" name="artist"><br>
+        <label>Rating (1-10):</label>
+        <select name="rating">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+        </select>
+        <input type="submit" value="Submit!">
+        </form>
+
 	</body>
 </html>

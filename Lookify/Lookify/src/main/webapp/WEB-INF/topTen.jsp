@@ -15,17 +15,13 @@
 	</head>
 
 	<body>
-        <h3>Edit Entry</h3>
-        <a href="/delete">Delete</a>
-        <a href="/">Dashboard</a>
-		<form action="/update/${language.id}" method="post">
-			<label>Name: </label>
-			<input type="text" name="name" placeholder="${language.name}"><br><br>
-			<label>Creator: </label>
-			<input type="text" name="creator" placeholder="${language.creator}"><br><br>
-			<label>Version: </label>
-			<input type="text" name="version" placeholder="${language.version}"><br><br>
-			<input type="submit" value="Submit"><br>
-		</form>
+        <a href="/dashboard">Dashboard</a>
+        <h1>TOP TEN HITS OF THE 90s</h1>
+        <ol>
+        <c:forEach items="${songs}" var = "song">  
+            <li>${song.rating} - ${song.title} - ${song.artist}</li>
+        </c:forEach> 
+        </ol>
+
 	</body>
 </html>

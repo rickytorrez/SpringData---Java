@@ -16,6 +16,7 @@ public class Languages{
 	@Id
 	@GeneratedValue
 	private long id;
+	
 	//Validators
 	@Size(min = 2, max = 20, message = "Name must be longer than two characters long.")
 	private String name;
@@ -26,27 +27,28 @@ public class Languages{
 	@NotNull(message = "Version cannot be empty.")
 	private double version;
 
+	//Set up empty method to be able to update
 	public Languages(){
 	}
 
+	//Set up method and call its variables
 	public Languages(String name, String creator, double version){
 		this.name 		= name;
 		this.creator 	= creator;
 		this.version 	= version;
-
 	}
 
+		// Set up Setters and Getters
 		public String getName(){
 			return name;
 		}
-
 		public void setName(String name){
 			this.name = name;
 		}
+
 		public double getVersion(){
 			return version;
 		}
-
 		public void setVersion(double version){
 			this.version = version;
 		}
@@ -54,7 +56,6 @@ public class Languages{
 		public String getCreator(){
 			return creator;
 		}
-
 		public void setCreator(String creator){
 			this.creator = creator;
 		}
@@ -62,9 +63,7 @@ public class Languages{
 		public long getId(){
 			return id;
 		}
-
 		public void setId(Long id){
 			this.id = id;
 		}
-		
 }

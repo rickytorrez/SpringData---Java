@@ -15,11 +15,12 @@
 	</head>
 
 	<body>
-				<c:out value="${languages.name}"/>
-                <c:out value="${languages.creator}"/>
-                <c:out value="${languages.version}"/>
-
-			<a href="/edit/${languages.id}">Edit</a> <a href="/delete/${languages.id}">Delete</a>
-<br>
+		<h2>Language Information</h2>
+		<h3>Language Name: </h3><c:out value="${languages.name}"/>
+		<h3>Language Creator: </h3><c:out value="${languages.creator}"/>
+		<h3>Language Version: </h3><c:out value="${languages.version}"/><br><br>
+		<a href="/edit/${languages.id}">Edit</a>
+		<a href="/delete/${languages.id}">Delete</a><br>
 	</body>
+
 </html>

@@ -15,17 +15,10 @@
 	</head>
 
 	<body>
-        <h3>Edit Entry</h3>
+        <a href="/dashboard">Dashboard!</a>
+        <p>Title:<c:out value="${lookify.title}"/></p>
+        <p>Artist:<c:out value="${lookify.artist}"/></p>
+        <p>Rating(1-10):<c:out value="${lookify.rating}"/></p>
         <a href="/delete">Delete</a>
-        <a href="/">Dashboard</a>
-		<form action="/update/${language.id}" method="post">
-			<label>Name: </label>
-			<input type="text" name="name" placeholder="${language.name}"><br><br>
-			<label>Creator: </label>
-			<input type="text" name="creator" placeholder="${language.creator}"><br><br>
-			<label>Version: </label>
-			<input type="text" name="version" placeholder="${language.version}"><br><br>
-			<input type="submit" value="Submit"><br>
-		</form>
 	</body>
 </html>
