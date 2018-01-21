@@ -62,7 +62,7 @@ public class Router{
 		Model model){
 			Lookify lookify = new Lookify(title, artist, rating);
 			lookifyService.create(lookify);
-			long id = (lookify.getId());
+			// long id = (lookify.getId());
 			return "redirect:/dashboard";
 	}
 
