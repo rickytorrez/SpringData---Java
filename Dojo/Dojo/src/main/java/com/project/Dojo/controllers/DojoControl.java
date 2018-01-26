@@ -47,7 +47,8 @@ public class DojoControl{
 	}
 
 	@PostMapping("/addLocation")
-	public String addLocation(@RequestParam(value="location") String location){ //REQUESTPARAM IS BASICALLY GRABBING POST INFO FROM THE JSP NAMED 'LOCATION' AND STORING IT IN A JAVA VARIABLE
+	public String addLocation(
+		@RequestParam(value="location") String location){ //REQUESTPARAM IS BASICALLY GRABBING POST INFO FROM THE JSP NAMED 'LOCATION' AND STORING IT IN A JAVA VARIABLE
 		DojoModel dojo = new DojoModel(location); //AFOREMENTIONED JAVA VARAIBLE IS PLACED INSIDE OF THE THE DOJO CONSTRUCTOR, SO A NEW DOJO OBJECT CAN BE BUILT
 		dojoService.create(dojo); //THIS LINE ACTUALLY BUILDS A NEW OBJECTS AND STORES IT IN DATABASE
 		System.out.println(location);

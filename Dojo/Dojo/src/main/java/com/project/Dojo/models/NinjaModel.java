@@ -39,11 +39,12 @@ public class NinjaModel{
 	@PreUpdate
 	public void onUpdate(){this.updatedAt = new Date();}
 
+	// Name Variables
 	private String firstName;
 	private String lastName;
-
 	private int age;
 
+	// Joint Type
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="dojo_id")
 	private DojoModel dojo;
